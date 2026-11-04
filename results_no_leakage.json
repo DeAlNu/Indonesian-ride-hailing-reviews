@@ -1,0 +1,105 @@
+{
+ "n_reviews": 9227,
+ "label_counts": {
+  "positif": 5191,
+  "negatif": 3598,
+  "netral": 438
+ },
+ "majority_baseline_acc": 0.5626,
+ "correct_protocol": {
+  "SVM_80/20": {
+   "train_acc": 0.981,
+   "test_acc": 0.8494,
+   "macro_f1": 0.607,
+   "recall": {
+    "negatif": 0.889,
+    "netral": 0.057,
+    "positif": 0.889
+   },
+   "n_train_unique": 7381,
+   "n_train_after_oversample": 12459,
+   "n_test": 1846
+  },
+  "LR_80/20": {
+   "train_acc": 0.9752,
+   "test_acc": 0.8359,
+   "macro_f1": 0.6247,
+   "recall": {
+    "negatif": 0.858,
+    "netral": 0.148,
+    "positif": 0.879
+   },
+   "n_train_unique": 7381,
+   "n_train_after_oversample": 12459,
+   "n_test": 1846
+  },
+  "RF_70/30": {
+   "train_acc": 0.9925,
+   "test_acc": 0.8324,
+   "macro_f1": 0.5789,
+   "recall": {
+    "negatif": 0.846,
+    "netral": 0.023,
+    "positif": 0.891
+   },
+   "n_train_unique": 6458,
+   "n_train_after_oversample": 10899,
+   "n_test": 2769
+  }
+ },
+ "strict_unseen_text": {
+  "SVM_80/20": {
+   "n_test_kept": 1478,
+   "n_test": 1846,
+   "test_acc": 0.8248,
+   "macro_f1": 0.5991
+  },
+  "LR_80/20": {
+   "n_test_kept": 1478,
+   "n_test": 1846,
+   "test_acc": 0.8078,
+   "macro_f1": 0.6166
+  },
+  "RF_70/30": {
+   "n_test_kept": 2256,
+   "n_test": 2769,
+   "test_acc": 0.8059,
+   "macro_f1": 0.5637
+  }
+ },
+ "old_method_with_leakage": {
+  "SVM_80/20": {
+   "train_acc": 0.9766,
+   "test_acc": 0.9437,
+   "macro_f1": 0.9436,
+   "recall": {
+    "negatif": 0.941,
+    "netral": 0.973,
+    "positif": 0.917
+   },
+   "test_rows_with_text_also_in_train": 0.8205
+  },
+  "LR_80/20": {
+   "train_acc": 0.9686,
+   "test_acc": 0.9382,
+   "macro_f1": 0.938,
+   "recall": {
+    "negatif": 0.936,
+    "netral": 0.973,
+    "positif": 0.905
+   },
+   "test_rows_with_text_also_in_train": 0.8205
+  },
+  "RF_70/30": {
+   "train_acc": 0.9888,
+   "test_acc": 0.9572,
+   "macro_f1": 0.9571,
+   "recall": {
+    "negatif": 0.945,
+    "netral": 0.986,
+    "positif": 0.941
+   },
+   "test_rows_with_text_also_in_train": 0.7934
+  }
+ }
+}
